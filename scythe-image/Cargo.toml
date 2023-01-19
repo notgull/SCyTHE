@@ -1,0 +1,8 @@
+[package]
+name = "scythe-image"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+scythe = { version = "0.1.0", path = "../scythe", default-features = false }
+tiny-skia = "0.8.2"

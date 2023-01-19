@@ -1,0 +1,19 @@
+[package]
+name = "scythic"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+glow = { version = "0.11.2", default-features = false, optional = true }
+glutin = { version = "0.30.3", default-features = false, optional = true, features = ["egl"] }
+raw-window-handle = "0.5.0"
+scythe = { version = "0.1.0", path = "../scythe", default-features = false }
+scythe-image = { version = "0.1.0", path = "../scythe-image", default-features = false }
+softbuffer = { git = "https://github.com/rust-windowing/softbuffer", branch = "master", default-features = false, features = ["x11"] }
+tracing = { version = "0.1.37", default-features = false }
+
+[features]
+default = ["gl"]
+
+# Enable the user of the OpenGL renderer.
+gl = ["glutin", "glow"]

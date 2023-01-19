@@ -1,0 +1,8 @@
+[package]
+name = "scythe"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+blood-geometry = { version = "0.1.0", path = "../../blood-geometry", default-features = false, features = ["alloc"] }
+genimage = { version = "0.1.0", path = "../../genimage", default-features = false }
